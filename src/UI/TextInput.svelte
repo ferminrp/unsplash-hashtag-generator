@@ -4,11 +4,12 @@
     export let value = "";
     export let placeholder = "Landscape, portrait";
     function save(event) {
+        console.log(event);
         if (event.key == "Enter" && value.length > 0) {
             dispatch('save', value);
             value = "";
             //console.log("Enter"+value);
-        } else if (event.key == "," && value.length > 1) {
+        } else if ((event.key == "," || event.code == "Comma" ) && value.length > 1) {
             value = value.replace(',','')
             dispatch('save', value);
             value = "";
