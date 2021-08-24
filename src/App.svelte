@@ -90,7 +90,8 @@
 
 <style>
 	main {
-		max-width: 720px;
+		width: 720px;
+		max-width: 90vw;
 		margin: 0 auto;
 	}
 
