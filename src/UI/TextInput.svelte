@@ -4,7 +4,6 @@
     export let value = "";
     export let placeholder = "Landscape, portrait";
     function save(event) {
-        console.log(event);
         if (event.key == "Enter" && value.length > 0) {
             dispatch('save', value);
             value = "";
