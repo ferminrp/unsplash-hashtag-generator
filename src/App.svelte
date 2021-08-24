@@ -24,7 +24,8 @@
 	async function apiFetcher(keyword) {
 		console.log("fetching "+keyword);
 		// Fetch data from API
-		let url = "https://thingproxy.freeboard.io/fetch/https://unsplash.com/nautocomplete/" + keyword;
+		let url = "https://unsplash-hashtags.ferminrp.workers.dev/corsproxy/?apiurl=https://unsplash.com/nautocomplete/" + keyword;
+		console.log(url);
 		let response = await fetch(url);
 		let data = await response.json();
 		for (let i = 0; i < await data["autocomplete"].length; i++) {
